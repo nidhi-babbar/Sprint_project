@@ -37,7 +37,7 @@ public class FeedbackController {
 	 
 	 @PutMapping("updateFeedback/{id}")
 	  @ResponseStatus(HttpStatus.OK)
-	  public Feedback updateFeedbackBasedOnRetro(@PathVariable("id") Long id,@RequestBody Feedback feedback) throws BadRequestException {
+	  public Feedback updateFeedbackBasedOnRetrospective(@PathVariable("id") Long id,@RequestBody Feedback feedback) throws BadRequestException {
 		 
 			if (feedback.getId()== null) {
 				 throw new BadRequestException("The ID is empty, we cannot update feedback");
@@ -48,7 +48,7 @@ public class FeedbackController {
 	 
 	 @PostMapping("createFeedback/{id}")
 	  @ResponseStatus(HttpStatus.OK)
-	  public Feedback saveFeedbackBasedOnRetro(@PathVariable("id") Long id,@RequestBody Feedback feedback) throws BadRequestException, BusinessException {
+	  public Feedback saveFeedbackBasedOnRetrospective(@PathVariable("id") Long id,@RequestBody Feedback feedback) throws BadRequestException, BusinessException {
 		 if (feedback.getId()!= null) {
 			 throw new BadRequestException("The ID must not be provided when creating a new Feedback");
 			

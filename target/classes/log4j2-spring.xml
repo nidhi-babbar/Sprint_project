@@ -35,13 +35,12 @@
 
 	<Loggers> 
 		
-		<!-- Logging at INFO level -->
+		
 		<Root level="info" > 
 			<AppenderRef ref="ConsoleOutput" /> 
 			<AppenderRef ref="LogFile" /> 
 			
-		</Root>
-		
+		</Root> 
 		
 
 
